@@ -1,0 +1,76 @@
+<div class="card__container">
+<div class="card"*ngFor="let item of fleetDetails">
+  <div class="card__header card__mb-sm">
+    <div class="card__header-left">
+      <img src="{{ item.iconUrl }}">
+      <h4>{{ item.label }}</h4>
+    </div>
+    <div class="card__header-right">
+      <div class="card__header-info exponent-warning" *ngIf="item.hasInfo">
+        <span class="card__header-letter">!</span>
+        <img src="assets/info-icon.png">
+      </div>
+      <img class="exponent-info" src="assets/info-icon-blue.png">
+    </div>
+  </div>
+
+  <div class="card card__mb-xs">
+    <div class="card__header">
+      <p class="text-16">{{ item.data.fleet.label }}</p>
+      <p class="semibold">{{ item.data.fleet.date }}</p>
+    </div>
+    <div class="card__body">
+      <h6>{{ item.data.fleet.numberOfTrucks }}</h6>
+      <div class="card__body-content text-16">
+        <div>
+          <p>With driver</p>
+          <span class="bold">{{ item.data.fleet.trucksWithDriver }}</span>
+        </div>
+        <div class="card__vertical-line"></div>
+        <div>
+          <p>No driver</p>
+          <span class="bold">{{ item.data.fleet.trucksWithoutDriver }}</span>
+        </div>
+      </div>
+      <p class="card__body-bottom">Daily average: <strong>{{ item.data.fleet.trucksDailyAverage }}</strong> trucks</p>
+    </div>
+  </div>
+
+
+  <div class="card card__mb-xs">
+    <div class="card__header">
+      <p>{{ item.data.duration.label }}</p>
+    </div>
+    <div class="card__body">
+      <div class="card__body-content gap-0 padding-xs">
+        <div class="card__body-time">
+          <p>Days</p>
+          <h6 class="time">{{ addLeadingZero(item.data.duration.days) }}</h6>
+        </div>
+        <div class="card__body-time">
+          <p>Hours</p>
+          <h6 class="time">{{ addLeadingZero(item.data.duration.hours) }}</h6>
+        </div>
+        <div class="card__body-time">
+          <p>Min</p>
+          <h6 class="time">{{ addLeadingZero(item.data.duration.minutes) }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card__mb-xs">
+    <div class="card__header">
+      <p>{{ item.data.cost.label }}</p>
+    </div>
+    <div class="card__body">
+      <h6>{{ item.data.cost.currency }}{{ item.data.cost.value | thousandsSeparator}}</h6>
+      <p class="text-16">{{ item.data.cost.cpmCurrency }}{{ item.data.cost.cpmValue }} CPM</p>
+    </div>
+  </div>
+
+  <div class="center-container">
+    <button class="btn btn-secondary text-16">See more</button>
+  </div>
+</div>
+</div>

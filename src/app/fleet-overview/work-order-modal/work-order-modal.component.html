@@ -1,0 +1,126 @@
+<div class="order__modal">
+  <button class="order__modal-btn" (click)="closeModal()">
+    <img src="assets/icon-wrench-light-blue.png">
+  </button>
+  <div class="order__modal-content">
+    <h2 class="gradient-text-secondary">Create Work Order</h2>
+    <p class="text-color-light-gray">
+      Use this section to record any events related to truck or trailer maintenance, such as repairs, inspections, or
+      maintenance tasks. You can also add follow-up notes,
+      photos or documentation to keep track of the maintenance progress.
+      Stay organized and informed
+    </p>
+    <div class="order__container">
+      <div class="order__filter">
+        <button class="btn btn-secondary blue">Truck</button>
+        <button class="btn btn-secondary">Trailer</button>
+      </div>
+      <table class="order__basic-info">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <div class="order__header">
+                <img src="assets/icon-info.png">
+                <p>Basic info</p>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Truck</td>
+            <td>7966</td>
+          </tr>
+          <tr>
+            <td>Brand</td>
+            <td>Freightliner Cascadia 2018</td>
+          </tr>
+          <tr>
+            <td>Trailer #</td>
+            <td>465156</td>
+          </tr>
+          <tr>
+            <td>Driver</td>
+            <td>Frederick Robinson</td>
+          </tr>
+          <tr>
+            <td>Dispatcher</td>
+            <td>Bojana Bogdanovic</td>
+          </tr>
+          <tr>
+            <td>Load Status</td>
+            <td>In transit</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <div class="order__btn">
+                <button>Next</button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <table class="order__details">
+        <thead>
+          <tr>
+            <th>
+              <img src="assets/icon-work.png">
+            </th>
+            <th class="order__header space-between">
+              <p>Work Order</p>
+              <div class="container__flex">
+                <img src="assets/icon-edit.png">
+                <img src="assets/icon-plus.png">
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <img src="assets/icon-contact.png">
+            </th>
+            <th class="order__header space-between order__header-padding">
+              <p>Contact Details</p>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <img src="assets/icon-payment.png">
+            </th>
+            <th class="order__header space-between">
+              <p>Payment Details</p>
+              <div class="container__flex">
+                <img src="assets/icon-edit.png">
+                <img src="assets/icon-plus.png">
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <img src="assets/icon-flag.png">
+            </th>
+            <th class="order__header space-between order__header-padding">
+              <p>Start/End</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2" class="order__horizontal-line"></td>
+          </tr>
+          <tr></tr>
+          <tr></tr>
+          <tr>
+            <td colspan="2">
+              <div class="container__flex">
+                <button class="btn btn-secondary" (click)="closeModal()">Discard</button>
+                <button class="btn btn-secondary blue">Finish</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

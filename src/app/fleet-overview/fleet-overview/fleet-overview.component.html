@@ -1,0 +1,162 @@
+<app-fleet-overview-nav [fleetSummaryData]="fleetData?.fleetSummary">
+</app-fleet-overview-nav>
+
+<div class="container">
+  <div class="overview__sub-header">
+    <h1 class="gradient-text-secondary">Overview</h1>
+    <div class="container__flex">
+      <div class="overview__select-period">
+        <div class="container__flex">
+          <div class="overview__period-info">
+            <p><small>Selected period</small></p>
+            <span>Jan 1, 2023 - Avg 31, 2023</span>
+          </div>
+          <img src="assets/icon-calendar.png">
+        </div>
+      </div>
+
+      <div class="overview__create-order">
+        <button (click)="openModal()">
+          <div class="container__flex">
+            <span class="gradient-text-secondary text-left">
+              Create<br><strong>Work Order</strong>
+            </span>
+            <img src="assets/icon-wrench.png">
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-work-order-modal *ngIf="modalService.isModalOpen"></app-work-order-modal>
+
+  <div class="container__inner">
+    <div class="card padding-0">
+      <div class="overview__container">
+        <div class="overview__container-left">
+          <ul class="overview__nav">
+            <li>
+              <img src="assets/icon-truck.png">
+              <span class="overview__nav-title">
+                <p>Active</p>
+                <p>trucks</p>
+              </span>
+            </li>
+            <li>
+              <img src="assets/icon-83994.png">
+              <span class="overview__nav-title">
+                <p>Fuel</p>
+                <p>consumption</p>
+              </span>
+            </li>
+            <li>
+              <img src="assets/icon-gas-station.png">
+              <span class="overview__nav-title">
+                <p>Fuel</p>
+                <p>consumption</p>
+              </span>
+            </li>
+            <li>
+              <img src="assets/icon-349749.png">
+              <span class="overview__nav-title">
+                <p>Fuel</p>
+                <p>consumption</p>
+              </span>
+            </li>
+            <li>
+              <img src="assets/icon-user.png">
+              <span class="overview__nav-title">
+                <p>Fuel</p>
+                <p>consumption</p>
+              </span>
+            </li>
+            <li>
+              <img src="assets/icon-arrow.png">
+            </li>
+          </ul>
+          <div class="overview__active-trucks">
+            <h4 class="gradient-text-secondary">Active trucks</h4>
+            <p class="text-color-light-gray">
+              Current number of trucks with assigned drivers.
+            </p>
+            <div class="overview__active-trucks-content">
+              <div class="text-center">
+                <div class="overview__percentage-container">
+                  <h4 class="overview__active-number">
+                    {{ fleetData?.fleetGeneralData?.fleetTrucks?.activeTrucks }}
+                  </h4>
+                  <span class="overview__active-percentage">
+                    {{ fleetData?.fleetGeneralData?.fleetTrucks?.activeTrucksPercent }}%
+                  </span>
+                </div>
+              </div>
+              <div class="overview__total-trucks">
+                <div>
+                  <p class="gradient-text-secondary">Total trucks</p>
+                  <h4>{{ fleetData?.fleetGeneralData?.fleetTrucks?.totalTrucks }}</h4>
+                </div>
+                <div>
+                  <p class="gradient-text-secondary">Empty trucks</p>
+                  <div class="overview__percentage-container">
+                    <h4 class="overview__empty-number">
+                      {{ fleetData?.fleetGeneralData?.fleetTrucks?.emptyTrucks }}
+                    </h4>
+                    <span class="overview__empty-percentage">
+                      {{ fleetData?.fleetGeneralData?.fleetTrucks?.emptyTrucksPercent }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview__active-trucks">
+          <div class="overview__container-right">
+            <div class="overview__timeline">
+              <div>
+                <h4 class="gradient-text-secondary">Utilization Timeline</h4>
+                <p>
+                  A graph showing the number of trucks with assigned drivers versus loaded trucks. <br>
+                  The actual amount will be shown in the preview by day. The preview by week or higher range will reveal
+                  average numbers.
+                </p>
+              </div>
+              <div class="overview__timeline-filter">
+                <div class="card padding-0 text-sm">
+                  <div class="container__flex">
+                    <span class="overview__timeline-date">Jan 1, 2023 - Avg 31, 2023</span>
+                    <button class="btn btn-secondary container__flex">
+                      <span class="overview__timeline-btn">By month</span>
+                      <img src="assets/icon-arrow-down.png">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="overview__timeline-data">
+              <div *ngFor="let item of fleetData?.fleetGeneralData?.fleetTimeline">
+                <div class="overview__timeline-data-info">
+                  <span>{{ item.label }}</span>
+                  <img src="assets/info-icon-blue.png">
+                </div>
+                <h5>{{ item.value }}<small>%</small></h5>
+              </div>
+            </div>
+
+            <app-fleet-line-chart *ngIf="fleetData?.fleetGeneralData" [fleetGeneralData]="fleetData?.fleetGeneralData">
+            </app-fleet-line-chart>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container__inner padding-top-30">
+    <app-fleet-overview-details [fleetDetails]="fleetData?.fleetDetails">
+    </app-fleet-overview-details>
+  </div>
+</div>

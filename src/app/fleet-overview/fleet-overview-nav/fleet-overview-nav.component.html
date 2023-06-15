@@ -1,0 +1,26 @@
+<div class="overview__header-container">
+  <div class="overview__header">
+    <h1 class="gradient-text-secondary">Fleet Health</h1>
+    <button class="btn btn-primary">Overview</button>
+  </div>
+
+  <div class="overview__header-nav">
+    <ul class="overview__header-nav">
+      <li class="overview__header-nav-btn" *ngFor="let item of fleetSummaryData">
+        <div class="left">
+          <p class="gradient-text-secondary">{{ item.label }}</p>
+        </div>
+        <div class="right">
+          <span>{{ item.value }}</span>
+          <div class="card__header-info exponent-warning" *ngIf="item.hasInfo">
+            <span class="card__header-letter">!</span>
+            <img src="assets/info-icon.png">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="overview__header-search">
+    <input type="text">
+  </div>
+</div>

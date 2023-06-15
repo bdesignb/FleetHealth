@@ -1,0 +1,232 @@
+{
+  "fleetSummary": [
+    {
+      "label":"Dealer&Shop",
+      "value": 8,
+      "hasInfo": true
+    },
+    {
+      "label":"Road Service",
+      "value": 8,
+      "hasInfo": false
+    },
+    {
+      "label":"Yard",
+      "value": 8,
+      "hasInfo": false
+    },
+    {
+      "label":"Recovery",
+      "value": 18,
+      "hasInfo": false
+    },
+    {
+      "label":"Abandoned",
+      "value": 3,
+      "hasInfo": false
+    }
+  ],
+  "fleetGeneralData": {
+    "fleetTrucks": {
+      "activeTrucks": 215,
+      "activeTrucksPercent": 74,
+      "totalTrucks": 250,
+      "emptyTrucks": 35,
+      "emptyTrucksPercent": 26
+    },
+    "fleetTimeline": [
+      {
+        "label": "Utilization",
+        "value": 63
+      },
+      {
+        "label": "Total utilization",
+        "value": 54
+      }
+    ],
+    "fleetChartData": [
+      {
+        "label": "Total number of trucks",
+        "valus": []
+      },
+      {
+        "label": "Loaded trucks",
+        "values": [6, 10, 8, 7, 6, 7, 10, 1]
+      },
+      {
+        "label": "Assigned trucks",
+        "values": [10, 12, 10, 13, 15, 10, 12]
+      }
+    ]
+  },
+  "fleetDetails": [
+    {
+      "label": "Dealership",
+      "hasInfo": true,
+      "iconUrl": "assets/dealership.png",
+      "data": {
+        "fleet": {
+          "label": "Trucks in dealership",
+          "date": "Today",
+          "numberOfTrucks": 5,
+          "trucksWithDriver": 4,
+          "trucksWithoutDriver": 1,
+          "trucksDailyAverage": 19
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 5,
+          "hours": 9,
+          "minutes": 52
+        },
+        "cost": {
+          "label": "Repairs in Dealership cost",
+          "value": 335000,
+          "currency": "$",
+          "cpmValue": 0.07,
+          "cpmCurrency": "$"
+        }
+      }
+    },
+    {
+      "label": "Shop",
+      "hasInfo": false,
+      "iconUrl": "assets/icon-shop.png",
+      "data": {
+        "fleet": {
+          "label": "Trucks in shop",
+          "date": "Today",
+          "numberOfTrucks": 3,
+          "trucksWithDriver": 3,
+          "trucksWithoutDriver": 0,
+          "trucksDailyAverage": 23
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 0,
+          "hours": 15,
+          "minutes": 13
+        },
+        "cost": {
+          "label": "Repairs in Shop cost",
+          "value": 11511,
+          "currency": "$",
+          "cpmValue": 0.04,
+          "cpmCurrency": "$"
+        }
+      }
+    },
+    {
+      "label": "Road Service",
+      "hasInfo": false,
+      "iconUrl": "assets/road-service.png",
+      "data": {
+        "fleet": {
+          "label": "Roadside Assistance",
+          "date": "Today",
+          "numberOfTrucks": 11,
+          "trucksWithDriver": 7,
+          "trucksWithoutDriver": 4,
+          "trucksDailyAverage": 19
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 0,
+          "hours": 2,
+          "minutes": 13
+        },
+        "cost": {
+          "label": "Road repair cost",
+          "value": 49561,
+          "currency": "$",
+          "cpmValue": 0.07,
+          "cpmCurrency": "$"
+        }
+      }
+    },
+    {
+      "label": "Yard",
+      "hasInfo": false,
+      "iconUrl": "assets/yard.png",
+      "data": {
+        "fleet": {
+          "label": "Trucks at the yard",
+          "date": "Today",
+          "numberOfTrucks": 7,
+          "trucksWithDriver": 5,
+          "trucksWithoutDriver": 2,
+          "trucksDailyAverage": 19
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 3,
+          "hours": 15,
+          "minutes": 13
+        },
+        "cost": {
+          "label": "Yard repair cost",
+          "value": 49561,
+          "currency": "$",
+          "cpmValue": 0.07,
+          "cpmCurrency": "$"
+        }
+      }
+    },
+    {
+      "label": "Recovery",
+      "hasInfo": false,
+      "iconUrl": "assets/recovery.png",
+      "data": {
+        "fleet": {
+          "label": "Trucks in Recovery status",
+          "date": "Today",
+          "numberOfTrucks": 18,
+          "trucksWithDriver": 11,
+          "trucksWithoutDriver": 7,
+          "trucksDailyAverage": 19
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 3,
+          "hours": 15,
+          "minutes": 13
+        },
+        "cost": {
+          "label": "Cost caused by recovery",
+          "value": 49561,
+          "currency": "$",
+          "cpmValue": 0.07,
+          "cpmCurrency": "$"
+        }
+      }
+    },
+    {
+      "label": "Abandoned",
+      "hasInfo": false,
+      "iconUrl": "assets/abandoned.png",
+      "data": {
+        "fleet": {
+          "label": "Abandoned trucks",
+          "date": "Today",
+          "numberOfTrucks": 7,
+          "trucksWithDriver": 11,
+          "trucksWithoutDriver": 7,
+          "trucksDailyAverage": 19
+        },
+        "duration": {
+          "label": "Average repair time",
+          "days": 3,
+          "hours": 15,
+          "minutes": 13
+        },
+        "cost": {
+          "label": "Cost caused by recovery",
+          "value": 49561,
+          "currency": "$",
+          "cpmValue": 0.07,
+          "cpmCurrency": "$"
+        }
+      }
+    }
+  ]
+}
